@@ -3,6 +3,11 @@ psycopg2-binary==2.9.5
 python-dotenv==1.0.0
 
 #dev
+django-extensions==3.2.1
+ipython==8.11.0
+
+
+#flake8
 flake8==6.0.0
 flake8-debugger==4.1.2
 flake8-print==5.0.0
