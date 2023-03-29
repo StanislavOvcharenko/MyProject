@@ -10,3 +10,10 @@ makemigrations:
 
 migrate:
 	$(manage_py) migrate
+
+build_and_run: makemigrations \
+	migrate \
+	run
+
+shell:
+	$(manage_py) shell_plus --print-sql
