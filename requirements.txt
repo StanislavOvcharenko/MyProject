@@ -5,6 +5,8 @@ python-dotenv==1.0.0
 #dev
 django-extensions==3.2.1
 ipython==8.11.0
+django-debug-toolbar==4.0.0
+
 
 
 #flake8
