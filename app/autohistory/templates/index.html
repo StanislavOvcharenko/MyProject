@@ -1,0 +1,13 @@
+{% extends 'parts/base.html' %}
+
+{% block main_content %}
+    <div>
+    <a href="{% url 'autohistory:create_auto_history' %}"> Зробити запис </a>
+    </div>
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Пошук</button>
+    </form>
+{% endblock main_content %}
