@@ -1,0 +1,9 @@
+{% extends 'parts/base.html' %}
+
+{% block main_content %}
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Створити</button>
+    </form>
+{% endblock main_content %}

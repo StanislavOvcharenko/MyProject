@@ -34,9 +34,13 @@ class CarCreateHistoryView(generic.CreateView):
     form_class = CarForm
     success_url = reverse_lazy('index')
 
+    def get_form_kwargs(self):
+        instance = super().get_form_kwargs()
+        instance['initial'] = {'company': self.request.user.id}
+        return instance
+
+
 
 class CarHistoryDetailView(generic.DetailView):
     queryset = Car.objects.all()
     template_name = 'auto_history_details.html'
-
-
