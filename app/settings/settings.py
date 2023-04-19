@@ -1,5 +1,5 @@
 from pathlib import Path
-
+from django.urls import reverse_lazy
 import os
 from dotenv import load_dotenv
 
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
 
     'autohistory',
+    'accounts',
 
 ]
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'settings.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,6 +108,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_REDIRECT_URL = reverse_lazy('index')
+LOGOUT_REDIRECT_URL = reverse_lazy('index')
+
+AUTH_USER_MODEL = 'accounts.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

@@ -2,7 +2,7 @@
 
 {% block main_content %}
     <div>
-        СТО: {{ object.service_station_name }} , Пробіг:{{ object.mileage }}{{ object.mileage_units }}
+        СТО: {{ object.service_station_name.station_name }} , Пробіг:{{ object.mileage }}{{ object.mileage_units }}
         ,Пошкодження: {{ object.damage }} ,Роботи: {{ object.work }}<br> Чек: {{ object.check_number }}
     </div>
     <a href="{% url 'autohistory:auto' object.vin_code %}"> До інших записів</a>
