@@ -45,7 +45,7 @@ class ProfileForm(forms.ModelForm):
         labels = {
             'EDRPOU': 'ЄДРПОУ',
             'company_name': 'Назва команії'
-                  }
+        }
 
 
 class ServiceStationForm(forms.ModelForm):
@@ -68,7 +68,6 @@ class ServiceStationForm(forms.ModelForm):
         }
         widgets = {'company': forms.HiddenInput()}
 
-
     def save(self, commit=True):
         instance = super().save(commit=False)
         instance.company = self.initial['company']
@@ -76,3 +75,21 @@ class ServiceStationForm(forms.ModelForm):
             instance.save()
         return instance
 
+
+class ServiceStationUpdateForm(forms.ModelForm):
+    class Meta:
+        model = ServiceStation
+        fields = [
+            'station_name',
+            'city',
+            'address',
+            'phone',
+            'email',
+        ]
+        labels = {
+            'station_name': 'Назва станції',
+            'city': 'Місто',
+            'address': 'Адреса',
+            'phone': 'Номер телефону',
+            'email': 'Пошта'
+        }

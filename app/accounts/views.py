@@ -4,7 +4,7 @@ from accounts.forms import SignUpForm
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
 from accounts.models import ServiceStation
-from accounts.forms import ProfileForm, ServiceStationForm
+from accounts.forms import ProfileForm, ServiceStationForm, ServiceStationUpdateForm
 
 
 class SignUpView(generic.CreateView):
@@ -34,3 +34,20 @@ class ServiceStationCreateView(generic.CreateView):
         instance = super().get_form_kwargs()
         instance['initial'] = {'company': self.request.user}
         return instance
+
+
+class ServiceStationListView(generic.ListView):
+    model = ServiceStation
+    template_name = 'list_service_station.html'
+
+
+class ServiceStationDetailView(generic.DetailView):
+    model = ServiceStation
+    template_name = 'details_service_station.html'
+
+
+class ServiceStationUpdateView(generic.UpdateView):
+    model = ServiceStation
+    form_class = ServiceStationUpdateForm
+    template_name = 'update_service_station.html'
+    success_url = reverse_lazy('accounts:list_service_station')
