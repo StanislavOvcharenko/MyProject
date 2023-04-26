@@ -1,0 +1,10 @@
+{% extends 'parts/base.html' %}
+
+{% block main_content %}
+    <div>
+       Назва: {{ servicestation.station_name }} ,Місто: {{ servicestation.city }},Адресса {{ servicestation.address }}
+       Номер телефону: {{ servicestation.phone }} ,Пошта: {{ servicestation.email }}
+    </div>
+    <a href="{% url 'accounts:list_service_station' %}"> До списку станцій</a>
+{% endblock main_content %}
+

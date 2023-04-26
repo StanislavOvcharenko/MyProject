@@ -12,3 +12,4 @@ class Car(models.Model):
     work = models.TextField(max_length=10000)
     check_number = models.CharField(max_length=22)
     created = models.DateField(auto_now_add=True)
+

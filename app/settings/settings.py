@@ -36,6 +36,8 @@ INSTALLED_APPS = [
 
     'autohistory',
     'accounts',
+    'comments_and_rating',
+
 
 ]
 

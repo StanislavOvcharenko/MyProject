@@ -1,0 +1,14 @@
+{% extends 'parts/base.html' %}3
+
+{% block main_content %}
+    <div>
+    <a href="{% url 'accounts:create_service_station'%}">Додати станцію</a>
+    {% for item in servicestation_list %}
+        <p>
+        Назва Станції : {{ item.station_name }}, Місто : {{ item.city}}, Адреса: {{ item.address }}
+            <a href="{% url 'accounts:details_service_station' item.id %}">Детальніше</a>
+            <a href="{% url 'accounts:update_service_station' item.id %}">Змінити</a>
+        </p>
+    {% endfor %}
+    </div>
+{% endblock main_content %}
