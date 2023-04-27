@@ -29,6 +29,7 @@ class SignUpForm(forms.ModelForm):
     def save(self, commit=True):
         instance = super().save(commit=False)
         instance.username = str(uuid.uuid4())
+        instance.is_active = False
         instance.set_password(self.cleaned_data['password'])
 
         if commit:
