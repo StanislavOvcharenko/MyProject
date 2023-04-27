@@ -7,3 +7,7 @@ class CommentsAndRatings(models.Model):
     car_working = models.OneToOneField('autohistory.Car', on_delete=models.DO_NOTHING, blank=True, null=True)
 
 
+class ServiceStationRating(models.Model):
+    service_station = models.OneToOneField('accounts.ServiceStation', on_delete=models.DateField)
+    rating = models.DecimalField(max_digits=5, decimal_places=3)
+
