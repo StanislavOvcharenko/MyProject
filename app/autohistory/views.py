@@ -2,6 +2,7 @@ from autohistory.models import Car
 from autohistory.forms import CarForm, SearchCarHistoryForm
 from django.views import generic
 from django.urls import reverse_lazy, reverse
+from accounts.models import ServiceStation
 
 
 class IndexView(generic.FormView):
@@ -40,7 +41,11 @@ class CarCreateHistoryView(generic.CreateView):
         return instance
 
 
-
 class CarHistoryDetailView(generic.DetailView):
-    queryset = Car.objects.all()
+    queryset = Car.objects.select_related('commentsandratings').all()
     template_name = 'auto_history_details.html'
+
+
+class CarStoryServiceStationsDataView(generic.DetailView):
+    queryset = ServiceStation.objects.all()
+    template_name = 'car_story_services_stations.html'

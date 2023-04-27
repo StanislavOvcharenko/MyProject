@@ -115,6 +115,16 @@ LOGOUT_REDIRECT_URL = reverse_lazy('index')
 
 AUTH_USER_MODEL = 'accounts.User'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'admin@admin.com'
+EMAIL_HOST_PASSWORD = 'admin1@admin.com'
+
+HTTP_SCHEMA = os.environ.get('HTTP_SCHEMA', 'http')
+DOMAIN = os.environ.get('DOMAIN', 'localhost:8000')
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
