@@ -3,7 +3,9 @@ import uuid
 from django import forms
 from django.contrib.auth import get_user_model
 from accounts.models import ServiceStation
-
+from django.core.mail import send_mail
+from django.conf import settings
+from django.urls import reverse
 
 class SignUpForm(forms.ModelForm):
     password_confirmation = forms.CharField(label='Підтвердження пароля')
@@ -32,7 +34,23 @@ class SignUpForm(forms.ModelForm):
         if commit:
             instance.save()
 
+        self._send_activation_email()
+
         return instance
+
+    def _send_activation_email(self):
+        subject = 'Activate account'
+        message = f'''
+        Activation link: {settings.HTTP_SCHEMA}://{settings.DOMAIN}{reverse('accounts:activate',
+                                                                            args=(self.instance.username,))}'''
+
+        send_mail(
+            subject,
+            message,
+            settings.EMAIL_HOST_USER,
+            [self.instance.email],
+            fail_silently=False,
+        )
 
 
 class ProfileForm(forms.ModelForm):

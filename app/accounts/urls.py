@@ -12,4 +12,5 @@ urlpatterns = [
     path('list/service-station/', views.ServiceStationListView.as_view(), name='list_service_station'),
     path('details/service-station/<int:pk>', views.ServiceStationDetailView.as_view(), name='details_service_station'),
     path('update/service-station/<int:pk>', views.ServiceStationUpdateView.as_view(), name='update_service_station'),
+    path('activate/<uuid:username>/', views.UserActivateView.as_view(), name='activate')
     ]
