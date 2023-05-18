@@ -6,6 +6,8 @@ from accounts.models import ServiceStation
 from django.core.mail import send_mail
 from django.conf import settings
 from django.urls import reverse
+from autohistory.tasks import send_activate_mail
+
 
 class SignUpForm(forms.ModelForm):
     password_confirmation = forms.CharField(label='Підтвердження пароля')
@@ -35,23 +37,9 @@ class SignUpForm(forms.ModelForm):
         if commit:
             instance.save()
 
-        self._send_activation_email()
+        send_activate_mail.delay(instance.username, instance.email)
 
         return instance
-
-    def _send_activation_email(self):
-        subject = 'Activate account'
-        message = f'''
-        Activation link: {settings.HTTP_SCHEMA}://{settings.DOMAIN}{reverse('accounts:activate',
-                                                                            args=(self.instance.username,))}'''
-
-        send_mail(
-            subject,
-            message,
-            settings.EMAIL_HOST_USER,
-            [self.instance.email],
-            fail_silently=False,
-        )
 
 
 class ProfileForm(forms.ModelForm):
@@ -76,6 +64,7 @@ class ServiceStationForm(forms.ModelForm):
             'address',
             'phone',
             'email',
+            'station_avatar',
             'company'
         ]
         labels = {
@@ -83,7 +72,8 @@ class ServiceStationForm(forms.ModelForm):
             'city': 'Місто',
             'address': 'Адреса',
             'phone': 'Номер телефону',
-            'email': 'Пошта'
+            'email': 'Пошта',
+            'station_avatar': 'Завантажте фото станції'
         }
         widgets = {'company': forms.HiddenInput()}
 

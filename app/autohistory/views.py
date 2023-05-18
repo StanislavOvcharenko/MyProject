@@ -1,8 +1,9 @@
-from autohistory.models import Car
+from autohistory.models import Car, DamagePhoto
 from autohistory.forms import CarForm, SearchCarHistoryForm
 from django.views import generic
 from django.urls import reverse_lazy, reverse
 from accounts.models import ServiceStation
+from autohistory.tasks import send_link_for_comment
 
 
 class IndexView(generic.FormView):
@@ -39,6 +40,17 @@ class CarCreateHistoryView(generic.CreateView):
         instance = super().get_form_kwargs()
         instance['initial'] = {'company': self.request.user.id}
         return instance
+
+    def form_valid(self, form):
+
+        car = form.save()
+
+        send_link_for_comment.delay(form.cleaned_data['check_number'], form.cleaned_data['email'])
+
+        damage_photos = self.request.FILES.getlist('damage_photo')
+        for photo in damage_photos:
+            DamagePhoto.objects.create(photo=photo, car_story=car)
+        return super().form_valid(form)
 
 
 class CarHistoryDetailView(generic.DetailView):

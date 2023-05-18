@@ -17,3 +17,9 @@ build_and_run: makemigrations \
 
 shell:
 	$(manage_py) shell_plus --print-sql
+
+celery:
+	cd app && celery -A settings worker --loglevel=INFO
+
+celerybeat:
+	cd app && celery -A settings beat --loglevel=INFO
