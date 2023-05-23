@@ -2,6 +2,7 @@ from pathlib import Path
 from django.urls import reverse_lazy
 import os
 from dotenv import load_dotenv
+from celery.schedules import crontab
 
 
 load_dotenv()
@@ -161,4 +162,13 @@ if DEBUG:
 
 
 CELERY_BROKER_URL = 'amqp://localhost'
+
+CELERY_BEAT_SCHEDULE = {
+    'update_service_stations_rating': {
+        'task': 'comments_and_rating.tasks.update_service_stations_rating',
+        # 'schedule': crontab(minute='00', hour='04') каждый день в 4 утра
+        'schedule': crontab(minute='*/20')  # каждые 20 минут
+    }
+}
+
 
