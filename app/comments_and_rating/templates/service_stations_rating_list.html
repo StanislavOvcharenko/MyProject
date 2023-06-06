@@ -1,0 +1,19 @@
+{% extends 'parts/base.html' %}3
+
+{% block main_content %}
+    <form method="get">
+        {{ filter.form.as_p }}
+    <button type="submit">Filter</button>
+    </form>
+
+    <div>
+    {% for station in servicestationrating_list %}
+        <div>
+        Станція: {{ station.service_station }} Рейтинг: {{ station.rating }}
+        </div>
+    {% endfor %}
+    </div>
+
+    {% include 'parts/pagination.html' %}
+
+{% endblock main_content %}

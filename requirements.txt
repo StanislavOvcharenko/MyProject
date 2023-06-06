@@ -3,6 +3,7 @@ psycopg2-binary==2.9.5
 python-dotenv==1.0.0
 Pillow==9.5.0
 Celery==5.2.7
+django-filter==23.2
 
 #dev
 django-extensions==3.2.1

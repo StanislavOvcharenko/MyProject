@@ -18,6 +18,7 @@ class IndexView(generic.FormView):
 
 class CarListView(generic.ListView):
     template_name = 'my_auto_history.html'
+    paginate_by = 5
 
     def get_queryset(self, **kwargs):
         vin_code = self.kwargs['pk']
@@ -61,3 +62,15 @@ class CarHistoryDetailView(generic.DetailView):
 class CarStoryServiceStationsDataView(generic.DetailView):
     queryset = ServiceStation.objects.all()
     template_name = 'car_story_services_stations.html'
+
+
+class CarDamagePhotosListView(generic.ListView):
+    queryset = DamagePhoto.objects.all()
+    template_name = 'damage_photos.html'
+
+    def get_queryset(self):
+        car_story_id = self.kwargs['pk']
+        queryset = DamagePhoto.objects.filter(car_story=car_story_id).all()
+        return queryset
+
+
