@@ -10,7 +10,9 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('autohistory/', include('autohistory.urls')),
     path('comments_and_rating/', include('comments_and_rating.urls')),
+    path('api/', include('api.urls')),
     path('accounts/', include('accounts.urls')),
+    path('auth/', include('django.contrib.auth.urls')),
     path('__debug__/', include('debug_toolbar.urls')),
 
 ]
