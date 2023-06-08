@@ -25,7 +25,7 @@ class ServiceStation(models.Model):
     phone = models.CharField(max_length=128)
     email = models.EmailField(unique=True)
     station_avatar = models.ImageField(upload_to=station_avatar,
-                                       default='accounts/images/default_station_photo', null=True)
+                                       default='accounts/images/default_station_photo.jpeg', null=True)
     company = models.ForeignKey('accounts.User', on_delete=models.DO_NOTHING)
 
     def __str__(self):

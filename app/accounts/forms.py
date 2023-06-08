@@ -94,11 +94,13 @@ class ServiceStationUpdateForm(forms.ModelForm):
             'address',
             'phone',
             'email',
+            'station_avatar'
         ]
         labels = {
             'station_name': 'Назва станції',
             'city': 'Місто',
             'address': 'Адреса',
             'phone': 'Номер телефону',
-            'email': 'Пошта'
+            'email': 'Пошта',
+            'station_avatar': 'Змінити фото станції'
         }
