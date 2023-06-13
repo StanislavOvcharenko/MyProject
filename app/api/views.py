@@ -1,12 +1,12 @@
 from rest_framework import generics
-from autohistory.models import Car
+from autohistory.models import CarStory
 from api.serializers import CarStorySerializer, ServiceStationSerializer, ServiceStationRatingSerializer
 from accounts.models import ServiceStation
 from comments_and_rating.models import ServiceStationRating
 
 
 class CarStoryListView(generics.ListAPIView):
-    queryset = Car.objects.select_related('service_station_name').all()
+    queryset = CarStory.objects.select_related('service_station_name').all()
     serializer_class = CarStorySerializer
 
     def get_queryset(self):

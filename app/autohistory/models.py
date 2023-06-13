@@ -16,7 +16,7 @@ def photo_damages(instance, filename):
                                                        instance.car_story.service_station_name.station_name, filename)
 
 
-class Car(models.Model):
+class CarStory(models.Model):
     vin_code = models.CharField(max_length=20)
     mileage_units = models.CharField(max_length=2, choices=MileageUnitType.choices)
     mileage = models.IntegerField()
@@ -29,5 +29,5 @@ class Car(models.Model):
 
 
 class DamagePhoto(models.Model):
-    car_story = models.ForeignKey('Car', on_delete=models.DO_NOTHING)
+    car_story = models.ForeignKey('CarStory', on_delete=models.DO_NOTHING)
     photo = models.ImageField(upload_to=photo_damages, null=True, blank=True)

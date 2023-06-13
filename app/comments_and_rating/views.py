@@ -1,7 +1,7 @@
 from django.views import generic
 from comments_and_rating.models import CommentsAndRatings, ServiceStationRating
 from comments_and_rating.forms import CommentsAndRatingsForm
-from autohistory.models import Car
+from autohistory.models import CarStory
 from django.urls import reverse_lazy
 from django_filters.views import FilterView
 from comments_and_rating.filters import ServiceStationsFilter
@@ -15,7 +15,7 @@ class CommentAndRatingCreateView(generic.CreateView):
 
     def get_form_kwargs(self):
         instance = super().get_form_kwargs()
-        car_story = Car.objects.filter(check_number=self.kwargs['check_number']).last()
+        car_story = CarStory.objects.filter(check_number=self.kwargs['check_number']).last()
         instance['car_story_id'] = car_story.id
         return instance
 
@@ -34,4 +34,3 @@ class ServiceStationsRatingListView(FilterView):
 
         context['filter_params'] = filters_params.urlencode()
         return context
-
