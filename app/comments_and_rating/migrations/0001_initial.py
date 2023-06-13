@@ -20,7 +20,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('rating', models.DecimalField(decimal_places=3, max_digits=5)),
-                ('service_station', models.OneToOneField(on_delete=django.db.models.fields.DateField, to='accounts.servicestation')),
+                ('service_station', models.OneToOneField(on_delete=django.db.models.fields.DateField,
+                                                         to='accounts.servicestation')),
             ],
         ),
         migrations.CreateModel(
@@ -29,7 +30,9 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('comment_text', models.CharField(max_length=1000)),
                 ('rating', models.IntegerField()),
-                ('car_working', models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.DO_NOTHING, to='autohistory.car')),
+                ('car_working', models.OneToOneField(blank=True, null=True,
+                                                     on_delete=django.db.models.deletion.DO_NOTHING,
+                                                     to='autohistory.car')),
             ],
         ),
     ]

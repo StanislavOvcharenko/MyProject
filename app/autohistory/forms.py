@@ -1,15 +1,16 @@
 from django import forms
 
 from accounts.models import ServiceStation
-from autohistory.models import Car
+from autohistory.models import CarStory
 
 
 class CarForm(forms.ModelForm):
     damage_photo = forms.FileField(widget=forms.ClearableFileInput(attrs={'multiple': True}), required=False,
                                    label=("Завантажте фотографіх пошкоджень"))
     email = forms.EmailField(label="Введіть пошту кліета")
+
     class Meta:
-        model = Car
+        model = CarStory
         fields = (
             'vin_code',
             'mileage_units',

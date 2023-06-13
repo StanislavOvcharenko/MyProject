@@ -18,7 +18,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='damagephoto',
             name='car_story',
-            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.DO_NOTHING, related_name='damage_photos', to='autohistory.car'),
+            field=models.ForeignKey(default=1, on_delete=django.db.models.deletion.DO_NOTHING,
+                                    related_name='damage_photos', to='autohistory.car'),
             preserve_default=False,
         ),
     ]

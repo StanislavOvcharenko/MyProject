@@ -33,8 +33,10 @@ class Migration(migrations.Migration):
                 ('work', models.TextField(max_length=10000)),
                 ('check_number', models.CharField(max_length=22)),
                 ('created', models.DateField(auto_now_add=True)),
-                ('damage_photo', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='autohistory.damagephoto')),
-                ('service_station_name', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='accounts.servicestation')),
+                ('damage_photo', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING,
+                                                   to='autohistory.damagephoto')),
+                ('service_station_name', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING,
+                                                           to='accounts.servicestation')),
             ],
         ),
     ]

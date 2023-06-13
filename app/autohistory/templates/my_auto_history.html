@@ -3,7 +3,7 @@
 {% block main_content %}
     <h3> Він-код: {{ vin_code }} </h3>
     <div>
-    {% for item in car_list %}
+    {% for item in carstory_list %}
         <p>
         Пробіг: {{ item.mileage }} {{ item.mileage_units }}, Дата: {{ item.created }}
             <a href="{% url 'autohistory:history_details' item.id %}"> Детальніше </a>

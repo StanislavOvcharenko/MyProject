@@ -1,4 +1,4 @@
-from autohistory.models import Car, DamagePhoto
+from autohistory.models import CarStory, DamagePhoto
 from autohistory.forms import CarForm, SearchCarHistoryForm
 from django.views import generic
 from django.urls import reverse_lazy, reverse
@@ -16,13 +16,13 @@ class IndexView(generic.FormView):
         return super().form_valid(form)
 
 
-class CarListView(generic.ListView):
+class CarStoriesListView(generic.ListView):
     template_name = 'my_auto_history.html'
     paginate_by = 5
 
     def get_queryset(self, **kwargs):
         vin_code = self.kwargs['pk']
-        queryset = Car.objects.filter(vin_code=vin_code).all()
+        queryset = CarStory.objects.filter(vin_code=vin_code).order_by('-created').all()
         return queryset
 
     def get_context_data(self, **kwargs):
@@ -31,8 +31,8 @@ class CarListView(generic.ListView):
         return context
 
 
-class CarCreateHistoryView(generic.CreateView):
-    queryset = Car.objects.all()
+class CarStoryCreateHistoryView(generic.CreateView):
+    queryset = CarStory.objects.all()
     template_name = 'create_auto_history.html'
     form_class = CarForm
     success_url = reverse_lazy('index')
@@ -54,8 +54,8 @@ class CarCreateHistoryView(generic.CreateView):
         return super().form_valid(form)
 
 
-class CarHistoryDetailView(generic.DetailView):
-    queryset = Car.objects.select_related('commentsandratings').all()
+class CarStoryHistoryDetailView(generic.DetailView):
+    queryset = CarStory.objects.select_related('commentsandratings').all()
     template_name = 'auto_history_details.html'
 
 
@@ -72,5 +72,3 @@ class CarDamagePhotosListView(generic.ListView):
         car_story_id = self.kwargs['pk']
         queryset = DamagePhoto.objects.filter(car_story=car_story_id).all()
         return queryset
-
-

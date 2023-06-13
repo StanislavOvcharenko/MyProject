@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
 
 from accounts.models import ServiceStation
-from autohistory.models import Car
+from autohistory.models import CarStory
 from rest_framework import serializers
 from comments_and_rating.models import ServiceStationRating
 
@@ -10,7 +10,7 @@ class CarStorySerializer(ModelSerializer):
     service_station = serializers.CharField(source='service_station_name.station_name')
 
     class Meta:
-        model = Car
+        model = CarStory
         fields = [
             'id',
             'vin_code',
@@ -51,4 +51,3 @@ class ServiceStationRatingSerializer(ModelSerializer):
             'rating',
 
         ]
-
