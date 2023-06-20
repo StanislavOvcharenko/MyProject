@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 import datetime
+from django.core.validators import MinLengthValidator, MaxLengthValidator
 
 
 def station_avatar(instance, filename):

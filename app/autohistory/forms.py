@@ -41,4 +41,4 @@ class CarForm(forms.ModelForm):
 
 
 class SearchCarHistoryForm(forms.Form):
-    vin = forms.CharField(max_length=20)
+    vin = forms.CharField(max_length=17, min_length=17)

@@ -1,0 +1,42 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$AaXhDTnR4FvDY6MQwfgtEj$N94A8cnvZUjxgQxsK1sf0o6Ggjd1PXra4nXpLlCJUbs=",
+      "last_login": "2023-06-20T14:20:10.617Z",
+      "is_superuser": false,
+      "username": "89266155-acf0-4f9a-9b12-7613f35dcf51",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2023-06-15T14:37:41.508Z",
+      "email": "admin@admin.com",
+      "EDRPOU": 22222222,
+      "company_name": "Моя Компания",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$bS7uGeS6ueECbbvGLpJGzf$TxcMjbc6bIJbHjbB6oUYYwgSLG2l9gtd3t8NDYvVZCg=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "1cc500f1-def5-4c65-ba68-d720b39bfe7a",
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": false,
+      "date_joined": "2023-06-20T14:55:35.722Z",
+      "email": "admin1@admin.com",
+      "EDRPOU": null,
+      "company_name": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

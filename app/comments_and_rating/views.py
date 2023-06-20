@@ -5,6 +5,7 @@ from autohistory.models import CarStory
 from django.urls import reverse_lazy
 from django_filters.views import FilterView
 from comments_and_rating.filters import ServiceStationsFilter
+from django.shortcuts import get_object_or_404
 
 
 class CommentAndRatingCreateView(generic.CreateView):
@@ -15,7 +16,7 @@ class CommentAndRatingCreateView(generic.CreateView):
 
     def get_form_kwargs(self):
         instance = super().get_form_kwargs()
-        car_story = CarStory.objects.filter(check_number=self.kwargs['check_number']).last()
+        car_story = get_object_or_404(CarStory, check_number=self.kwargs['check_number'])
         instance['car_story_id'] = car_story.id
         return instance
 

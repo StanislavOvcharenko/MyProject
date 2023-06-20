@@ -1,0 +1,101 @@
+[
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 1,
+    "fields": {
+      "comment_text": "Коментар 1",
+      "rating": 5,
+      "car_working": 1
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 2,
+    "fields": {
+      "comment_text": "Коментар 2",
+      "rating": 3,
+      "car_working": 2
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 3,
+    "fields": {
+      "comment_text": "Коментар 3",
+      "rating": 5,
+      "car_working": 3
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 4,
+    "fields": {
+      "comment_text": "Коментар 4",
+      "rating": 2,
+      "car_working": 4
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 5,
+    "fields": {
+      "comment_text": "Коментар 5",
+      "rating": 3,
+      "car_working": 5
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 6,
+    "fields": {
+      "comment_text": "Коментар 6",
+      "rating": 5,
+      "car_working": 6
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 7,
+    "fields": {
+      "comment_text": "Коментар 7",
+      "rating": 5,
+      "car_working": 7
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 8,
+    "fields": {
+      "comment_text": "Коментар 7",
+      "rating": 4,
+      "car_working": 8
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 9,
+    "fields": {
+      "comment_text": "Коментар 9",
+      "rating": 2,
+      "car_working": 9
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 10,
+    "fields": {
+      "comment_text": "Коментар 10",
+      "rating": 5,
+      "car_working": 10
+    }
+  },
+  {
+    "model": "comments_and_rating.commentsandratings",
+    "pk": 11,
+    "fields": {
+      "comment_text": "Коментар 11",
+      "rating": 5,
+      "car_working": 11
+    }
+  }
+]

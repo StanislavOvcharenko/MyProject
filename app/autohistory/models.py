@@ -17,7 +17,7 @@ def photo_damages(instance, filename):
 
 
 class CarStory(models.Model):
-    vin_code = models.CharField(max_length=20)
+    vin_code = models.CharField(max_length=17)
     mileage_units = models.CharField(max_length=2, choices=MileageUnitType.choices)
     mileage = models.IntegerField()
     mileage_photo = models.ImageField(upload_to=photo_mileage, null=True)

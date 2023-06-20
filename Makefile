@@ -23,3 +23,6 @@ celery:
 
 celerybeat:
 	cd app && celery -A settings beat --loglevel=INFO
+
+pytest:
+	pytest app/tests/
