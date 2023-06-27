@@ -34,3 +34,4 @@ def send_link_for_comment(check_number, email):
         [email],
         fail_silently=False,
     )
+

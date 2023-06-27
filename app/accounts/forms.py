@@ -54,7 +54,7 @@ class ProfileForm(forms.ModelForm):
             'company_name': 'Назва команії'
         }
 
-    def clean_edrpou(self):
+    def clean_EDRPOU(self):
         edrpou = self.cleaned_data['EDRPOU']
         if len(str(edrpou)) != 8:
             raise forms.ValidationError("Невірна довжина ЄДРПОУ. Допустима лише 8 символів.")
