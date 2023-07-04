@@ -2,13 +2,13 @@
 
 {% block main_content %}
     <div>
-        СТО: <a href="{% url 'autohistory:car_story_service_station_details' object.service_station_name.id %}">{{ object.service_station_name.station_name }}</a>
+        СТО: <a href="{% url 'accounts:details_service_station' object.service_station_name.id %}">{{ object.service_station_name.station_name }}</a>
         , Пробіг:{{ object.mileage }}{{ object.mileage_units }}
         ,Пошкодження: <a href="{% url 'autohistory:damage_photos' object.id %}"> {{ object.damage }}</a>
         ,Роботи: {{ object.work }}<br> Чек: {{ object.check_number }}
         <br>
         Фото одометра : <img src="{{ object.mileage_photo.url }}" height="120" width="120">
     </div>
-    <a href="{% url 'autohistory:auto' object.vin_code %}"> До інших записів</a>
+    <a href="{% url 'autohistory:car_story' object.vin_code %}"> До інших записів</a>
 {% endblock main_content %}
 

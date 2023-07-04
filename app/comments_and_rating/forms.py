@@ -20,3 +20,10 @@ class CommentsAndRatingsForm(forms.ModelForm):
         story_id = kwargs.pop('car_story_id')
         super().__init__(*args, **kwargs)
         self.initial['car_working'] = story_id
+
+    def clean_rating(self):
+        rating = self.cleaned_data.get('rating')
+        if rating not in range(1, 6):
+            raise forms.ValidationError('Enter a whole number.')
+
+        return rating

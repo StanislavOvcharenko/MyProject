@@ -1,0 +1,93 @@
+[
+  {
+    "model": "accounts.servicestation",
+    "pk": 1,
+    "fields": {
+      "station_name": "Моя Станція",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція/3/my-station.jpeg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 2,
+    "fields": {
+      "station_name": "Моя Станція2",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin1@admin.com",
+      "station_avatar": "accounts/images/default_station_photo.jpeg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 3,
+    "fields": {
+      "station_name": "Моя Станція3",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin3@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція3/3/default_station_photo.jpg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 4,
+    "fields": {
+      "station_name": "Моя Станція4",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin4@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція4/3/default_station_photo.jpg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 5,
+    "fields": {
+      "station_name": "Моя Станція5",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin5@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція5/3/default_station_photo.jpg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 6,
+    "fields": {
+      "station_name": "Моя Станція6",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin6@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція6/3/default_station_photo.jpg",
+      "company": 3
+    }
+  },
+  {
+    "model": "accounts.servicestation",
+    "pk": 7,
+    "fields": {
+      "station_name": "Моя Станція7",
+      "city": "Дніпро",
+      "address": "Кутузова",
+      "phone": "0999999",
+      "email": "admin7@admin.com",
+      "station_avatar": "station_avatar/2023/6/15/Моя Станція7/3/default_station_photo.jpg",
+      "company": 3
+    }
+  }
+]

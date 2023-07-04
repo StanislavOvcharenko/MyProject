@@ -1,0 +1,50 @@
+[
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 1,
+    "fields": {
+      "service_station": 1,
+      "rating": "3.833"
+    }
+  },
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 2,
+    "fields": {
+      "service_station": 2,
+      "rating": "5.000"
+    }
+  },
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 3,
+    "fields": {
+      "service_station": 3,
+      "rating": "4.000"
+    }
+  },
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 4,
+    "fields": {
+      "service_station": 4,
+      "rating": "2.000"
+    }
+  },
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 5,
+    "fields": {
+      "service_station": 5,
+      "rating": "5.000"
+    }
+  },
+  {
+    "model": "comments_and_rating.servicestationrating",
+    "pk": 6,
+    "fields": {
+      "service_station": 6,
+      "rating": "5.000"
+    }
+  }
+]

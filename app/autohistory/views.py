@@ -4,6 +4,7 @@ from django.views import generic
 from django.urls import reverse_lazy, reverse
 from accounts.models import ServiceStation
 from autohistory.tasks import send_link_for_comment
+from django.http import Http404
 
 
 class IndexView(generic.FormView):
@@ -12,7 +13,7 @@ class IndexView(generic.FormView):
 
     def form_valid(self, form):
         vin = form.cleaned_data.get('vin')
-        self.success_url = reverse('autohistory:auto', kwargs={'pk': vin})
+        self.success_url = reverse('autohistory:car_story', kwargs={'pk': vin})
         return super().form_valid(form)
 
 
@@ -59,9 +60,9 @@ class CarStoryHistoryDetailView(generic.DetailView):
     template_name = 'auto_history_details.html'
 
 
-class CarStoryServiceStationsDataView(generic.DetailView):
-    queryset = ServiceStation.objects.all()
-    template_name = 'car_story_services_stations.html'
+# class CarStoryServiceStationsDataView(generic.DetailView):
+#     queryset = ServiceStation.objects.all()
+#     template_name = 'car_story_services_stations.html'
 
 
 class CarDamagePhotosListView(generic.ListView):

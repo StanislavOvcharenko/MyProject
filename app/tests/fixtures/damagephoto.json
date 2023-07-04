@@ -1,0 +1,178 @@
+[
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 1,
+    "fields": {
+      "car_story": 2,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/sailorOJR.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 2,
+    "fields": {
+      "car_story": 2,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/venusV.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 3,
+    "fields": {
+      "car_story": 2,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/USAYELLOW.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 4,
+    "fields": {
+      "car_story": 3,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/rose-red.jpeg"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 5,
+    "fields": {
+      "car_story": 3,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/PanamaP.jpeg"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 6,
+    "fields": {
+      "car_story": 3,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/Dubai.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 7,
+    "fields": {
+      "car_story": 4,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/YELLOWSTONE.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 8,
+    "fields": {
+      "car_story": 5,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/USAYELLOW_QKq432M.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 9,
+    "fields": {
+      "car_story": 5,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/sailorOJR_Qr36TSL.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 10,
+    "fields": {
+      "car_story": 5,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/my-station.jpeg"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 11,
+    "fields": {
+      "car_story": 6,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/Dubai_PrFJbiH.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 12,
+    "fields": {
+      "car_story": 6,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/venusV_r0hyH4n.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 13,
+    "fields": {
+      "car_story": 6,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/USAYELLOW_Bq84QGo.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 14,
+    "fields": {
+      "car_story": 6,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція/sailorOJR_gaC5L1i.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 15,
+    "fields": {
+      "car_story": 7,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція2/USAYELLOW.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 16,
+    "fields": {
+      "car_story": 7,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція2/sailorOJR.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 17,
+    "fields": {
+      "car_story": 7,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція2/my-station.jpeg"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 18,
+    "fields": {
+      "car_story": 8,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція3/PanamaP.jpeg"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 19,
+    "fields": {
+      "car_story": 8,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція3/Dubai.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 20,
+    "fields": {
+      "car_story": 8,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція3/venusV.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 21,
+    "fields": {
+      "car_story": 10,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція5/USAYELLOW.png"
+    }
+  },
+  {
+    "model": "autohistory.damagephoto",
+    "pk": 22,
+    "fields": {
+      "car_story": 11,
+      "photo": "damages_photo/2023/6/15/12345678901234567/Моя Станція6/USAYELLOW.png"
+    }
+  }
+]
