@@ -55,10 +55,17 @@ def test_profile_post_empty(logged_user):
 
 
 def test_profile_post_valid_data(logged_user):
-    data = {'EDRPOU': '9999999',
+    data = {'EDRPOU': '99999998',
             'company_name': '456456456'}
     response = logged_user.post(reverse('accounts:profile'), data=data)
     assert response.status_code == 302
+
+
+def test_profile_post_invalid_data(logged_user):
+    data = {'EDRPOU': '9999998',
+            'company_name': '456456456'}
+    response = logged_user.post(reverse('accounts:profile'), data=data)
+    assert response.status_code == 200
 
 
 def test_create_service_station_get(logged_user):
@@ -91,13 +98,14 @@ def test_create_service_station_post_invalid_email(logged_user):
     assert response.context_data['form'].errors == {'email': ['Enter a valid email address.']}
 
 
-def test_create_service_station_post_valid_data(logged_user):
+def test_create_service_station_post_valid_data(logged_user, load_image):
     data = {'station_name': 'my station',
             'city': 'Dnipro',
             'address': 'Dniprovska 2',
             'phone': '9379992',
             'email': 'test@example.com',
-            'company': 3
+            'company': 3,
+            'station_avatar': load_image
             }
     response = logged_user.post(reverse('accounts:create_service_station'), data=data)
     assert response.status_code == 302

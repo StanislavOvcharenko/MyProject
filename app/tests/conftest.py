@@ -3,7 +3,7 @@ import pytest
 from django.core.management import call_command
 from django.core.files.uploadedfile import SimpleUploadedFile
 
-from django.test import Client
+from rest_framework.test import APIClient
 from accounts.models import User
 
 
@@ -36,10 +36,15 @@ def load_image():
                              content_type='image/jpeg')
     return img
 
+
 @pytest.fixture
 def logged_user(client):
     user = User.objects.get(pk=3)
     client.force_login(user)
     return client
 
+
+@pytest.fixture()
+def api_client():
+    return APIClient()
 

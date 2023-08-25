@@ -1,0 +1,10 @@
+#docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+#Replaces a command in the main file
+
+
+version: "3"
+
+services:
+
+  backend:
+    command: python app/manage.py runserver 0.0.0.0:8000
